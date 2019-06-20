@@ -1,0 +1,286 @@
+%%%%% File: resume.tex
+%%%%% Author: Rohit Roy
+%%%%% Init Date: June 2019
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt,a4paper]{moderncv} 
+\moderncvstyle{classic} 
+\moderncvcolor{blue}
+\renewcommand{\familydefault}{\rmdefault} 
+
+\usepackage{siunitx}
+% Setup font
+\usepackage{lmodern}
+
+%\usepackage[13pt]{extsizes} % uncomment to use even larger fonts (upto 20pt)
+\usepackage[utf8]{inputenc}
+% For fontawesome icons
+\usepackage{fontawesome}
+\usepackage{enumitem}
+% Setup Geometry
+\usepackage{geometry}
+\geometry{
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+\recomputelengths
+
+% Setup footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{Resume - Rohit Roy - 2019}
+
+% Get rid of hyphens
+\hyphenpenalty=10000
+
+% Customize name font:
+\renewcommand*{\namefont}{\fontsize{48}{20}\mdseries \upshape}
+% Customize address font:
+\renewcommand*{\addressfont}{\small\mdseries\slshape}
+% Customize quote font:
+\renewcommand*{\quotefont}{\large\slshape}
+% Customize section font:
+\renewcommand*{\sectionfont}{\LARGE\mdseries\upshape}
+\renewcommand*{\subsectionfont}{\Large\mdseries\upshape}
+
+% Name to display
+\name{Rohit}{Roy}
+
+% Setup extra info on right bar
+\extrainfo{
+\faAt \hspace{3.5mm} rohit.roy@duke.edu\\
+\faLinkedinSquare \hspace{0mm} \textcolor{blue}{\href{https://linkedin.com/in/blooops}{linkedin.com/blooops}}\\
+\faGithub \hspace{2.2mm} \textcolor{blue}{\href{https://github.com/blooops}{github.com/blooops}}\\
+\faGlobe \hspace{7mm} \textcolor{blue}{\href{https://blooops.github.io}{blooops.github.io}}
+}
+
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+\begin{document}
+
+
+% Make the CV title:
+\makecvtitle
+
+\vspace{-1.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\vspace{4mm}
+
+\cventry{2019--present}{Duke University}{Durham, NC, USA}{}{}{
+\textit{Ph.D.} in Computational Biology and Bioinformatics\\
+Duke Center for Genomic and Computational Biology
+}
+
+\vspace{4mm}
+
+\cventry{2015--2019}{Indian Institute of Technology}{Kharagpur, WB, India}{}{}{
+\textit{Bachelor of Technology (Honours)}\\
+\textit{Major}: Biotechnology and Biochemical Engineering\\
+\textit{Minor}: Mathematics and Computing\\
+\textit{GPA}: 8.6/10 (first in class) }
+
+\vspace{2mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION RESEARCH INTERESTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Interests}
+
+\vspace{4mm}
+
+\cvitem{}{Structural Bioinformatics, Molecular Dynamics, Statistical Modelling, Genomic Data Analysis, High Performance Scientific Computing, GPU programming, Linux System Programming}
+
+\vspace{2mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION EXPERIENCE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Experience}
+
+\vspace{4mm}
+
+\cventry{2018--2019}{Identification of Human Host Factors for\textit{ Flaviviruses}}{}{}{}{
+\textit{Senior Thesis (BTP)} at Indian Institute of Technology, \textit{Kharagpur, India}\\
+\textit{Supervisor}: Prof. Riddhiman Dhar
+\begin{itemize}[topsep=8pt,itemsep=4pt,parsep=0pt,partopsep=0pt]
+    \item Analyzed genome wide screen data to identify proviral and antiviral host factors.
+    \item Utilized non-parametric test (Mann-Whitney U test) with multiple testing correction.
+    \item Determined relevant interaction pathways through gene ontology based networks.
+\end{itemize}
+}
+
+\vspace{4mm}
+
+\cventry{Summer 2018}{Fragment Based Modelling of ssRNA - Protein complexes}{}{}{}{
+\textit{Summer Internship} at Inria Nancy (University of Lorraine), \textit{Nancy, France}\\
+\textit{Supervisor}: Dr. Isaure Chauvot de Beauchene
+\begin{itemize}[topsep=8pt,itemsep=4pt,parsep=0pt,partopsep=0pt]
+    \item Extended the fragment based  \textcolor{blue}{\href{http://www.attract.ph.tum.de/services/ATTRACT/attract.html}{ATTRACT}} algorithm for ssRNA secondary structures.
+    \item Achieved RMSD within 2 to 6 \AA \hspace{1pt} against known complexes: 4pkd, 2c4z, 1ec6, 5udz.
+    \item Optimized the time complexity by parallelizing using numpy to enable scaling up.
+\end{itemize}
+}
+
+\vspace{4mm}
+
+\cventry{2017--2018}{Rigid Body Modelling of Protein - DNA Interactions}{}{}{}{
+\textit{Research Project} at Indian Institute of Technology, \textit{Kharagpur, India}\\
+\textit{Supervisor}: Prof. Agneyo Ganguly, Prof. Pralay Mitra
+\begin{itemize}[topsep=8pt,itemsep=4pt,parsep=0pt,partopsep=0pt]
+    \item Created a new docker using method of convolutions (Katchalski-Katzir algorithm). 
+    \item Modelled 3-dimensional DNA strands of varying parameters using \textcolor{blue}{\href{https://x3dna.org/}{3DNA}}.
+    \item Successful against the Haddock benchmark for easy and intermediate cases.
+\end{itemize}
+}
+
+\vspace{2mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+
+\vspace{2mm}
+
+\cvitem{Languages}{C, C++, Python, Bash, R, MATLAB, Ruby, Javascript, Java, Perl, PHP, \LaTeX}
+
+\vspace{2mm}
+
+\cvitem{APIs}{Scipy, Numpy, Pandss, CUDA, OpenCV, TensorFlow, OpenGL, NodeJS}
+
+\vspace{2mm}
+
+\cvitem{Tools}{VMD, CHARMMM, PyMOL, Visual Studio, Vim, Git, Gimp}
+
+\vspace{2mm}
+
+\cvitem{OS}{Windows, Linux (Debian, Archlinux), Unix (xv6)}
+
+\vspace{2mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION OTHER EXPERIENCE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Development Work / Projects}
+
+
+\vspace{4mm}
+
+\cventry{2019--present}{BioCPP}{a minimalist C++ library for Computational Structural Biology}{}{}{
+\textit{An open-source project I am working on, currently hosted at \textcolor{blue}{\href{https://github.com/blooops/biocpp}{github}}}.
+\begin{itemize}[topsep=4pt,itemsep=4pt,parsep=0pt,partopsep=0pt]
+    \item Compatible with different structure file formats
+    \item Implements standard required data structures and commonly used algorithms.
+    \item Easily programmable pipeline. 
+\end{itemize}
+}
+
+\vspace{4mm}
+
+\cventry{2018--present}{coala}{an open-source project on Github}{}{}{
+\textit{Member of the coala organization and open-source community, hosted on \textcolor{blue}{\href{https://github.com/blooops/coala}{github}}}.
+\begin{itemize}[topsep=4pt,itemsep=4pt,parsep=0pt,partopsep=0pt]
+    \item open-source language independent analysis toolkit, written in Python.
+    \item worked on several aspects: the central code base, PR review and documentation.
+\end{itemize}
+}
+
+\vspace{4mm}
+
+\cventry{2018--present}{Game Development}{}{}{}{
+\textit{Member of the indie game development community. }.
+\begin{itemize}[topsep=4pt,itemsep=4pt,parsep=0pt,partopsep=0pt]
+    \item Participate regularly in Game Dev Competitions (i.e. Ludum Dare).
+    \item Well versed in Graphic Programming Tools: OpenGL API, Blender, LWJGL.
+\end{itemize}
+}
+
+\vspace{2mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION AWARDS AND ACHIE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards \& Achievements}
+
+\vspace{4mm}
+
+\cvlistitem{Recipient of the Institute Silver Medal, IIT Kharagpur.}
+\vspace{4mm}
+\cvlistitem{Secured the 1\textsuperscript{st} rank within the B.Tech. graduating batch of 2019, at the Department of Biotechnology, IIT Kharagpur.}
+\vspace{4mm}
+\cvlistitem{Invited to participate in the National Science Camp (Vijyoshi) held by the Indian Institute of Science, Bangalore in 2014.}
+\vspace{4mm}
+\cvlistitem{Informatics Olympiad: National level finalist in the Indian National Olympiad of Informatics (INOI) held by IARCS in 2014 and 2015. (Selection camp for Indian team to International Olympiad of Informatics)}
+\vspace{4mm}
+\cvlistitem{Second Runners Up in HP Code Wars - India held in Bangalore in 2014, with participation from over 55 finalists from across the country.}
+
+\vspace{4mm}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION FELLOWSHIPS AND SCHOLARSHIPS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Scholarships \& Fellowships}
+
+\vspace{4mm}
+
+\cvlistitem{Kishore Vaigyanik Protsahan Yojana (KVPY) scholarship, by the Indian Institute of Science Bangalore in 2014.}
+\vspace{4mm}
+\cvlistitem{National Talent Search Examination (NTSE) scholarship, by the National Council of Educational Research and Training (NCERT) in 2013.}
+\vspace{4mm}
+\cvlistitem{State Level NTS scholarship, by the Department of State Educational Research and Training Karnataka (DSERT) in 2011.}
+
+\vspace{4mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% POSITIONS OF RESPONSIBILITY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Positions of Responsibility}
+
+\vspace{4mm}
+
+\cvlistitem{Governor: Debating Society, IIT Kharagpur}
+\vspace{1mm}
+\cvlistitem{Literary Secretary: Homi J. Bhabha Hall of Residence, IIT Kharagpur}
+\vspace{4mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION VOLUNTEER SERVICES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Volunteer Services}
+
+\vspace{4mm}
+
+\cvlistitem{Member of the First Bengal EME Coy, National Cadet Corps (2015-2016).}
+\vspace{1mm}
+\cvlistitem{Content Creation for NPTEL course on Effective Speaking, Indian Ministry of Human Resource Development (2017).}
+
+\vspace{4mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXAMPLE COLUMN IN MODERNCV %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Person}
+%  	{\begin{itemize}
+%  	\item Tom Gilman \\
+%  	\item Mark Mercer \\
+%    \item Danny Kunes \\
+%    \item Theresa Harezlak
+%  	\end{itemize}}
+%  \cvcolumn{Email}
+%  	{\begin{itemize}
+%  	\item tomgilman @biosero.com
+%    \item mrmarkmercer @gmail.com
+%    \item dan.kunes @kunescountry.com
+%    \item tharezlak @savantcapital.com
+%    \end{itemize}}
+%  \cvcolumn[0.5]{Company \& Job Title}
+%  	{\begin{itemize}
+%   \item Biosero, Inc.  - CEO \\
+%   \item RDA, LLC - Business Owner \\
+%  \item Savant Capital - Financial Advisor 
+%   \end{itemize}}
+%\end{cvcolumns}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
